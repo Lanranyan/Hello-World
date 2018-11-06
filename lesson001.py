@@ -1,0 +1,10 @@
+print('Hello World')
+print("My name is Dragon")
+var = 2018
+print("Today is November 5th.")
+print(7+13)
+print(7-13)
+print(3*9)
+print(14/2)
+print(3^2)
+print(3**3)
