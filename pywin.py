@@ -14,6 +14,17 @@
 #import a library of functions called 'pygame'
 import pygame
 import os   # Operation system
+import datetime
+
+
+def draw_text(text):
+    # Select the font to use, size, bold, italics
+    font = pygame.font.SysFont('Calibri', 25, True, False)
+    # Render the text. "True" means anti-aliased text.
+    # Black is the color. This creates an image of the
+    # letters, but does not put it on the screen
+    text_new = font.render(text, True, RED)
+    return text_new
 
 # Define some colors
 BLACK = (0, 0, 0)
@@ -52,6 +63,7 @@ while not done:
 
     # --- Game logic should go here
 
+
     # --- Screen-clearing code goes here
 
     # Here, we clear the screen to white. Don't put other drawing commands
@@ -62,6 +74,13 @@ while not done:
     screen.fill(SKY_BLUE)
 
     # --- Drawing code should go here
+    #### rect(Surface, color, Rect, width=0) -> Rect
+    rect0 = pygame.draw.rect(screen, GREEN, [200, 200, 400, 150], 0)
+    #[ starting point x, sp y, width of rect, height o rect], width=0 is line thickness, but 0 fills it
+
+    ### polygon(Surface, color, pointlist, width=0) -> Rect
+
+
 
     # --- Go ahead and update the screen with what we've drawn.
     pygame.display.flip()
